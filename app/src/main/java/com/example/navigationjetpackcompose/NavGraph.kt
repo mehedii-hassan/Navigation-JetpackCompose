@@ -1,10 +1,14 @@
 package com.example.navigationjetpackcompose
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
+import kotlin.math.log
 
 @Composable
 fun SetUpNavGraph(
@@ -20,8 +24,12 @@ fun SetUpNavGraph(
             HomeScreen(navController)
         }
         composable(
-            route = Screen.Details.route
+            route = Screen.Details.route,
+            arguments = listOf(navArgument("id"){
+                type = NavType.IntType
+            })
         ) {
+            Log.d("Args",it.arguments?.getInt("id").toString())
             DetailsScreen(navController)
         }
     }

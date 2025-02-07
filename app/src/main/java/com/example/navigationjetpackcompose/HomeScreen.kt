@@ -21,10 +21,10 @@ fun HomeScreen(
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
-    ){
+    ) {
         Text(
             modifier = Modifier.clickable {
-                navHostController.navigate(route = Screen.Details.route)
+                navHostController.navigate(route = "details_screen/"+2)
             },
             text = "Home",
             color = MaterialTheme.colorScheme.primary,
