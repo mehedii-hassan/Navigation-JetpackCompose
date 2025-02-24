@@ -2,6 +2,9 @@ package com.example.navigationjetpackcompose
 
 const val DETAIL_ARGUMENT_KEY = "id"
 const val DETAIL_ARGUMENT_KEY2 = "name"
+const val AUTHENTICATION_ROUTE="authentication"
+const val ROOT_ROUTE="root"
+const val HOME_ROUTE="home"
 
 sealed class Screen(val route: String) {
     data object Home : Screen(route = "home_screen")

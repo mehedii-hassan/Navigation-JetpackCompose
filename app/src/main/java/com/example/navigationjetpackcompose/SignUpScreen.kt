@@ -29,7 +29,7 @@ fun SignUpScreen(
             },
             text = "Sign Up",
             color = Color.Green,
-            fontSize = MaterialTheme.typography.headlineMedium.fontSize,
+            fontSize = MaterialTheme.typography.headlineLarge.fontSize,
             fontWeight = FontWeight.Bold
         )
     }

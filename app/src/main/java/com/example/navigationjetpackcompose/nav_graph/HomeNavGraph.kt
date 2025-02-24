@@ -1,22 +1,25 @@
-package com.example.navigationjetpackcompose
+package com.example.navigationjetpackcompose.nav_graph
 
 import android.util.Log
-import androidx.compose.runtime.Composable
-import androidx.navigation.NavHost
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
 import androidx.navigation.navArgument
-import kotlin.math.log
+import com.example.navigationjetpackcompose.DETAIL_ARGUMENT_KEY
+import com.example.navigationjetpackcompose.DETAIL_ARGUMENT_KEY2
+import com.example.navigationjetpackcompose.DetailsScreen
+import com.example.navigationjetpackcompose.HOME_ROUTE
+import com.example.navigationjetpackcompose.HomeScreen
+import com.example.navigationjetpackcompose.Screen
 
-@Composable
-fun SetUpNavGraph(
+fun NavGraphBuilder.homeNavGraph(
     navController: NavHostController
 ) {
-    NavHost(
-        navController = navController,
-        startDestination = Screen.Home.route
+    navigation(
+        startDestination = Screen.Home.route,
+        route = HOME_ROUTE
     ) {
         composable(
             route = Screen.Home.route
@@ -28,7 +31,7 @@ fun SetUpNavGraph(
             arguments = listOf(
                 navArgument(DETAIL_ARGUMENT_KEY) {
                     type = NavType.IntType
-                    defaultValue=0
+                    defaultValue = 0
                 },
                 navArgument(DETAIL_ARGUMENT_KEY2) {
                     type = NavType.StringType
@@ -40,4 +43,6 @@ fun SetUpNavGraph(
             DetailsScreen(navController)
         }
     }
+
+
 }
