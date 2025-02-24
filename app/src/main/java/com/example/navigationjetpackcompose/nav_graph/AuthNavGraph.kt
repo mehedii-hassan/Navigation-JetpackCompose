@@ -5,9 +5,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.example.navigationjetpackcompose.AUTHENTICATION_ROUTE
-import com.example.navigationjetpackcompose.LoginScreen
+import com.example.navigationjetpackcompose.screens.LoginScreen
 import com.example.navigationjetpackcompose.Screen
-import com.example.navigationjetpackcompose.SignUpScreen
+import com.example.navigationjetpackcompose.screens.SignUpScreen
 
 fun NavGraphBuilder.authNavGraph(
     navController: NavHostController

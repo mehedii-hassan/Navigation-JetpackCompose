@@ -9,9 +9,9 @@ import androidx.navigation.compose.navigation
 import androidx.navigation.navArgument
 import com.example.navigationjetpackcompose.DETAIL_ARGUMENT_KEY
 import com.example.navigationjetpackcompose.DETAIL_ARGUMENT_KEY2
-import com.example.navigationjetpackcompose.DetailsScreen
+import com.example.navigationjetpackcompose.screens.DetailsScreen
 import com.example.navigationjetpackcompose.HOME_ROUTE
-import com.example.navigationjetpackcompose.HomeScreen
+import com.example.navigationjetpackcompose.screens.HomeScreen
 import com.example.navigationjetpackcompose.Screen
 
 fun NavGraphBuilder.homeNavGraph(

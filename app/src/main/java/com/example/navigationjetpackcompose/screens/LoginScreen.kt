@@ -1,4 +1,4 @@
-package com.example.navigationjetpackcompose
+package com.example.navigationjetpackcompose.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.navigationjetpackcompose.Screen
 
 @Composable
 fun LoginScreen(
